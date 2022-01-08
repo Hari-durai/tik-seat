@@ -30,12 +30,7 @@ class Autho with ChangeNotifier{
     await FirebaseAuth.instance.signInWithCredential(cred);
     notifyListeners();
   }
-  Future loginemail(var email,var pass) async{
-    await FirebaseAuth.instance.signInWithEmailAndPassword(email:email ,password:pass );
-  }
-  Future sigupemail(String email,String pass) async{
-    await FirebaseAuth.instance.createUserWithEmailAndPassword(email:email ,password:pass );
-  }
+ 
 
   Future signout() async{
 
