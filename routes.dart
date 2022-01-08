@@ -14,7 +14,7 @@ class Routes extends StatefulWidget{
 }
 
 class _RoutesState extends State<Routes> {
-  String author;//=widget.auth;
+  String author;
   @override
   void initState() {
     if (author==null){
@@ -24,15 +24,12 @@ class _RoutesState extends State<Routes> {
       author=widget.auth;
       getfn();
     });
-   // author=widget.auth;
-   // print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+   
     print(author);
     super.initState();
   }
   getfn() async{
     print(author);
-    print('nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn');
-   // if(author!=null)
     author=widget.auth;
     return  FirebaseFirestore.instance.collection('user').doc(author).collection('route');
 
@@ -79,8 +76,6 @@ class _RoutesState extends State<Routes> {
 
                           ),
                         ));
-              }),
-        )
-    );////chats/iqQmYmGutZmxOlkFDpV4/message
+              }
   }
 }
